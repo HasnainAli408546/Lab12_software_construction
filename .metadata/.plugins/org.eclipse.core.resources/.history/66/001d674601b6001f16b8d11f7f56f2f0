@@ -1,0 +1,57 @@
+package lab12;
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+import java.math.BigInteger;
+
+public class RecursiveDigitSumTest {
+
+    // Test for sumOfDigits with Integer input
+    @Test
+    public void testSumOfDigitsInt() {
+        // Regular positive number
+        assertEquals(6, RecursiveDigitSum.sumOfDigits(123));
+
+        // Negative number
+        assertEquals(15, RecursiveDigitSum.sumOfDigits(-456));
+
+        // Edge case for zero
+        assertEquals(0, RecursiveDigitSum.sumOfDigits(0));
+
+        // Large number
+        assertEquals(36, RecursiveDigitSum.sumOfDigits(9999));
+
+        // Very large number
+        assertEquals(1, RecursiveDigitSum.sumOfDigits(1000000));
+    }
+
+    // Test for sumOfDigits with BigInteger input
+    @Test
+    public void testSumOfDigitsBigInteger() {
+        // Zero input
+        assertEquals(0, RecursiveDigitSum.sumOfDigits(BigInteger.ZERO));
+
+        // Regular positive BigInteger
+        assertEquals(45, RecursiveDigitSum.sumOfDigits(new BigInteger("123456789")));
+
+        // Large BigInteger
+        assertEquals(126, RecursiveDigitSum.sumOfDigits(new BigInteger("999999999999999")));
+
+        // Very large BigInteger
+        assertEquals(135, RecursiveDigitSum.sumOfDigits(new BigInteger("123456789012345678901234567890")));
+    }
+
+    // Test for null input for BigInteger method
+    @Test(expected = IllegalArgumentException.class)
+    public void testNullInputBigInteger() {
+        RecursiveDigitSum.sumOfDigits((BigInteger) null);
+    }
+
+    // Test for null input for Integer method
+    @Test(expected = IllegalArgumentException.class)
+    public void testNullInputInteger() {
+        // Since Integer method doesn't take null values directly, just making sure we handle them elsewhere
+        // So we don't need to handle it for the Integer method as it would be an IllegalArgumentException directly.
+    }
+}
+

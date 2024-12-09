@@ -1,0 +1,86 @@
+package lab12;
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+/**
+ * Test class for MathExpressionParser.
+ */
+public class MathExpressionParserTest {
+    
+    @Test
+    public void testAddition() {
+        assertEquals(8.0, MathExpressionParser.evaluateExpression("3 + 5"), 0.0001);
+    }
+    
+    @Test
+    public void testMultiplication() {
+        assertEquals(10.0, MathExpressionParser.evaluateExpression("5 * 2"), 0.0001);
+    }
+
+    @Test
+    public void testParentheses() {
+        assertEquals(16.0, MathExpressionParser.evaluateExpression("(3 + 5) * 2"), 0.0001);
+    }
+
+    @Test
+    public void testMixedOperations() {
+        assertEquals(14.0, MathExpressionParser.evaluateExpression("10 / 2 + 3 * 4"), 0.0001);
+    }
+
+    @Test
+    public void testFloatingPointNumbers() {
+        assertEquals(10.9, MathExpressionParser.evaluateExpression("2.5 + 3.7 * 2"), 0.0001);
+    }
+
+    @Test
+    public void testNegativeNumbers() {
+        assertEquals(-1.0, MathExpressionParser.evaluateExpression("-5 + 3 * -2"), 0.0001);
+    }
+
+    @Test
+    public void testComplexParentheses() {
+        assertEquals(15.0, MathExpressionParser.evaluateExpression("(2 + 3) * (4 - 1)"), 0.0001);
+    }
+
+    @Test
+    public void testDivisionByZero() {
+        try {
+            MathExpressionParser.evaluateExpression("1 / 0");
+            fail("Expected ArithmeticException for division by zero");
+        } catch (ArithmeticException e) {
+            assertEquals("Division by zero", e.getMessage());
+        }
+    }
+
+    @Test
+    public void testMismatchedParentheses() {
+        try {
+            MathExpressionParser.evaluateExpression("1 + (2 * 3");
+            fail("Expected IllegalArgumentException for mismatched parentheses");
+        } catch (IllegalArgumentException e) {
+            assertEquals("Invalid expression: 1 + (2 * 3", e.getMessage());
+        }
+    }
+
+    @Test
+    public void testEmptyExpression() {
+        try {
+            MathExpressionParser.evaluateExpression("");
+            fail("Expected IllegalArgumentException for empty expression");
+        } catch (IllegalArgumentException e) {
+            assertEquals("Invalid expression: ", e.getMessage());
+        }
+    }
+
+    @Test
+    public void testInvalidCharacter() {
+        try {
+            MathExpressionParser.evaluateExpression("3 + $5");
+            fail("Expected IllegalArgumentException for invalid character");
+        } catch (IllegalArgumentException e) {
+            assertEquals("Invalid expression: 3 + $5", e.getMessage());
+        }
+    }
+}
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="RecursiveBinarySearchTest" project="lab12" tests="11" started="11" failures="0" errors="0" ignored="0">
+  <testsuite name="lab12.RecursiveBinarySearchTest" time="0.017">
+    <testcase name="testBinarySearchRecursiveEmptyArrayInteger" classname="lab12.RecursiveBinarySearchTest" time="0.007"/>
+    <testcase name="testBinarySearchRecursiveStringFound" classname="lab12.RecursiveBinarySearchTest" time="0.002"/>
+    <testcase name="testBinarySearchRecursiveNullArrayString" classname="lab12.RecursiveBinarySearchTest" time="0.001"/>
+    <testcase name="testBinarySearchRecursiveStringNotFound" classname="lab12.RecursiveBinarySearchTest" time="0.001"/>
+    <testcase name="testBinarySearchRecursiveNullArrayInteger" classname="lab12.RecursiveBinarySearchTest" time="0.001"/>
+    <testcase name="testBinarySearchSingleElementNotFound" classname="lab12.RecursiveBinarySearchTest" time="0.001"/>
+    <testcase name="testBinarySearchRecursiveIntegerFound" classname="lab12.RecursiveBinarySearchTest" time="0.001"/>
+    <testcase name="testBinarySearchMultipleIndices" classname="lab12.RecursiveBinarySearchTest" time="0.0"/>
+    <testcase name="testBinarySearchRecursiveIntegerNotFound" classname="lab12.RecursiveBinarySearchTest" time="0.001"/>
+    <testcase name="testBinarySearchRecursiveEmptyArrayString" classname="lab12.RecursiveBinarySearchTest" time="0.001"/>
+    <testcase name="testBinarySearchSingleElementFound" classname="lab12.RecursiveBinarySearchTest" time="0.0"/>
+  </testsuite>
+</testrun>

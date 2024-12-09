@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="MathExpressionParserTest" project="lab12" tests="7" started="7" failures="0" errors="0" ignored="0">
+  <testsuite name="lab12.MathExpressionParserTest" time="0.001">
+    <testcase name="testMismatchedParentheses" classname="lab12.MathExpressionParserTest" time="0.0"/>
+    <testcase name="testComplexParentheses" classname="lab12.MathExpressionParserTest" time="0.0"/>
+    <testcase name="testEmptyExpression" classname="lab12.MathExpressionParserTest" time="0.0"/>
+    <testcase name="testMultiplication" classname="lab12.MathExpressionParserTest" time="0.0"/>
+    <testcase name="testAddition" classname="lab12.MathExpressionParserTest" time="0.0"/>
+    <testcase name="testInvalidCharacter" classname="lab12.MathExpressionParserTest" time="0.001"/>
+    <testcase name="testParentheses" classname="lab12.MathExpressionParserTest" time="0.0"/>
+  </testsuite>
+</testrun>
